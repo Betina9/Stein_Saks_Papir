@@ -11,14 +11,14 @@
         <h1>Stein, Saks, Papir!</h1>
         <h2>Mini game</h2>
       <div id="choices">
-        <button data-choice ="rock">Stein 🪨</button>
-        <button data-choice="scissors">Saks ✂️</button>
-        <button data-choice="paper">Papir 📄</button>
+        <button onclick="play('rock')">Stein 🪨</button>
+        <button onclick="play('scissors')">Saks ✂️</button>
+        <button onclick="play('paper')">Papir 📄</button>
       </div>
       <video id="handAnimation" width="200"><source src="./images/hands.mp4" type="video/mp4"></video>
       <div id="result">
-        <p id="user-choice">Ditt valg: </p>
-        <p id="computer-choice">Datamaskinens valg: </p>
+        <p id="userChoice">Ditt valg: </p>
+        <p id="computerChoice">Datamaskinens valg: </p>
         <p id="outcome">Resultat: </p>
       </div>
     <script src="app.js"></script>
