@@ -24,8 +24,8 @@ h2 {
   margin-bottom: 15px;
   font-size: 2.5em;
 }
-p {
-  font-size: 1.2em;
+#result {
+  font-size: 2em;
   margin: 30px;
 }
 button {

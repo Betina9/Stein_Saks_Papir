@@ -1,9 +1,10 @@
 const hands = ["rock", "paper", "scissors"];
 const handAnimation = document.getElementById("handAnimation");
 const userChoice = document.getElementById("userChoice");
+const computerChoice = document.getElementById("computerChoice");
 const resultText = document.getElementById("result");
 
-/* Spilleren velger en hånd*/
+/* Datamaskinen velger et item*/
 function getHand() {
   const randomIndex = Math.floor(Math.random() * 3);
   return hands[randomIndex];
@@ -11,6 +12,7 @@ function getHand() {
 
 /* Håndanimasjonen*/
 function play(playerChoice) {
+  userChoice.textContent = `Ditt valg: ${playerChoice}`;
   resultText.textContent = "";
   handAnimation.currentTime = 0;
   handAnimation.style.display = "block";
@@ -25,7 +27,7 @@ function play(playerChoice) {
     let result;
 
     if (playerChoice === computerChoice) {
-      result = "Uavgjort!";
+      result = "Uavgjort! ";
     } else if (
       (playerChoice === "rock" && computerChoice === "scissors") ||
       (playerChoice === "paper" && computerChoice === "rock") ||
@@ -36,5 +38,5 @@ function play(playerChoice) {
       result = "Datamaskinen vant!😞";
     }
     resultText.textContent = `Datamaskinens valg: ${computerChoice}. ${result}`;
-  }, 2000);
+  }, 5000);
 }
