@@ -1,4 +1,3 @@
-// Logikk-verdier (engelsk)
 const hands = ["rock", "paper", "scissors"];
 const t = {
   rock: "🪨 Stein",
@@ -11,6 +10,8 @@ const userChoice = document.getElementById("userChoice");
 const computerChoice = document.getElementById("computerChoice");
 const outcome = document.getElementById("outcome");
 
+document.getElementById("result").style.display = "none";
+
 // Datamaskinens valg
 function getHand() {
   const randomIndex = Math.floor(Math.random() * hands.length);
@@ -19,6 +20,7 @@ function getHand() {
 
 // Spillrunde
 function play(playerChoice) {
+  document.getElementById("result").style.display = "block";
   userChoice.textContent = `Ditt valg: ${t[playerChoice]}`;
   computerChoice.textContent = "Datamaskinens valg: …";
   outcome.textContent = "";
